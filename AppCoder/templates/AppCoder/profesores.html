@@ -1,0 +1,18 @@
+{% extends 'AppCoder/padre.html' %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+    {% if mi_formulario.errors %}
+    <p style="color: red">Estan mal los datos, revisar</p>
+    {% endif %}
+
+
+    <form action=""  method="post">{% csrf_token %}
+        <table>
+            {{mi_formulario.as_table}}
+        </table>
+        <input type = "submit" value="Enviar">
+    </form>   
+{% endblock contenidoQueCambia %}

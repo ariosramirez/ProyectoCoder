@@ -1,0 +1,18 @@
+{% extends "AppCoder/padre.html" %}
+
+
+{% load static %}
+
+
+{% block contenidoQueCambia %}
+<h1>Cambiar contrasenia</h1>
+<form action='' method="POST">
+    {% csrf_token %}
+    <table>
+        {{form}}
+    </table>
+    <button>Cambiar</button>
+</form>
+
+
+{% endblock %}
