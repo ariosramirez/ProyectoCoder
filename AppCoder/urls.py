@@ -4,8 +4,6 @@ from django.contrib.auth.views import LogoutView
 
 # Para las imagenes
 from django.conf import settings
-from django.conf.urls.static import static
-from ProyectoCoder.settings import  MEDIA_URL, MEDIA_ROOT
 
 
 
@@ -36,5 +34,3 @@ urlpatterns = [
     path('cambiarContrasenia', views.CambiarContrasenia.as_view(), name="CambiarContrasenia"),
 
 ]
-
-urlpatterns+= static(MEDIA_URL, document_root=MEDIA_ROOT)
